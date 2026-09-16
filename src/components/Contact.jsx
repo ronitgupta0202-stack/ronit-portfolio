@@ -99,56 +99,56 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-slate-950 border-t border-slate-900">
+    <section id="contact" className="py-16 sm:py-20 md:py-28 relative bg-slate-950 border-t border-slate-900">
       
       {/* Glow background accent */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-500/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[350px] sm:w-[600px] h-[200px] sm:h-[300px] bg-cyan-500/5 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16">
+        <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono uppercase tracking-wider mb-3">
             <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
             <span>Get In Touch</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
             Let's Build Something <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Great Together</span>
           </h2>
-          <p className="mt-3 text-slate-400 text-base max-w-2xl">
+          <p className="mt-2.5 sm:mt-3 text-slate-400 text-sm sm:text-base max-w-2xl">
             Currently open to Software Engineering, Web Development, and Artificial Intelligence internship opportunities.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start max-w-6xl mx-auto">
           
           {/* Left Column: Direct Recruiter Details */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 w-full">
             
-            <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 glass-card text-left">
-              <h3 className="text-xl font-bold text-white mb-2">Direct Contact Information</h3>
-              <p className="text-xs text-slate-400 mb-6">
+            <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-8 glass-card text-left">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-1.5 sm:mb-2">Direct Contact Information</h3>
+              <p className="text-xs text-slate-400 mb-5 sm:mb-6">
                 Reach out directly via email, phone, or professional social profiles.
               </p>
 
-              <div className="space-y-4">
+              <div className="space-y-3.5 sm:space-y-4">
                 
                 {/* Email Card */}
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between group">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between group">
+                  <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                    <div className="p-2 sm:p-2.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 shrink-0">
                       <Mail className="w-4 h-4" />
                     </div>
-                    <div>
-                      <span className="text-[11px] font-mono text-slate-400 block">Email Address</span>
-                      <a href={`mailto:${personalInfo.email}`} className="text-sm font-semibold text-slate-200 hover:text-cyan-300 transition-colors">
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 block">Email Address</span>
+                      <a href={`mailto:${personalInfo.email}`} className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-cyan-300 transition-colors truncate block">
                         {personalInfo.email}
                       </a>
                     </div>
                   </div>
                   <button
                     onClick={handleCopyEmail}
-                    className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors"
+                    className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors shrink-0 ml-2"
                     title="Copy Email"
                   >
                     {copiedEmail ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
@@ -156,21 +156,21 @@ export default function Contact() {
                 </div>
 
                 {/* Phone Card */}
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between group">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400">
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between group">
+                  <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                    <div className="p-2 sm:p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 shrink-0">
                       <Phone className="w-4 h-4" />
                     </div>
-                    <div>
-                      <span className="text-[11px] font-mono text-slate-400 block">Phone Number</span>
-                      <a href={`tel:${personalInfo.phone}`} className="text-sm font-semibold text-slate-200 hover:text-cyan-300 transition-colors">
+                    <div className="min-w-0">
+                      <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 block">Phone Number</span>
+                      <a href={`tel:${personalInfo.phone}`} className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-cyan-300 transition-colors truncate block">
                         +91 {personalInfo.phone}
                       </a>
                     </div>
                   </div>
                   <button
                     onClick={handleCopyPhone}
-                    className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors"
+                    className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 transition-colors shrink-0 ml-2"
                     title="Copy Phone Number"
                   >
                     {copiedPhone ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
@@ -178,13 +178,13 @@ export default function Contact() {
                 </div>
 
                 {/* Location Card */}
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-3">
-                  <div className="p-2.5 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400">
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-2.5 sm:gap-3">
+                  <div className="p-2 sm:p-2.5 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-400 shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono text-slate-400 block">Location</span>
-                    <span className="text-sm font-semibold text-slate-200">
+                    <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 block">Location</span>
+                    <span className="text-xs sm:text-sm font-semibold text-slate-200">
                       {personalInfo.location}
                     </span>
                   </div>
@@ -193,16 +193,16 @@ export default function Contact() {
               </div>
 
               {/* Social Buttons */}
-              <div className="pt-6 mt-6 border-t border-slate-800 grid grid-cols-2 gap-3">
+              <div className="pt-5 sm:pt-6 mt-5 sm:mt-6 border-t border-slate-800 grid grid-cols-2 gap-3">
                 <SocialButton
                   type="github"
                   url={personalInfo.githubUrl}
-                  className="flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs font-mono font-medium transition-colors"
+                  className="flex items-center justify-center gap-2 py-2.5 sm:py-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs font-mono font-medium transition-colors"
                 />
                 <SocialButton
                   type="linkedin"
                   url={personalInfo.linkedinUrl}
-                  className="flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs font-mono font-medium transition-colors"
+                  className="flex items-center justify-center gap-2 py-2.5 sm:py-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-slate-200 text-xs font-mono font-medium transition-colors"
                 />
               </div>
 
@@ -211,37 +211,37 @@ export default function Contact() {
           </div>
 
           {/* Right Column: Web3Forms Contact Form */}
-          <div className="lg:col-span-7">
-            <form onSubmit={handleSubmit} className="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 glass-card space-y-4 text-left">
-              <h3 className="text-xl font-bold text-white mb-1">Send a Message</h3>
-              <p className="text-xs text-slate-400 mb-6">
+          <div className="lg:col-span-7 w-full">
+            <form onSubmit={handleSubmit} className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 sm:p-8 glass-card space-y-4 text-left">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-1">Send a Message</h3>
+              <p className="text-xs text-slate-400 mb-5 sm:mb-6">
                 Send a direct message forwarded to <span className="text-cyan-300 font-mono">roniitgupta0202@gmail.com</span>.
               </p>
 
               {/* Status Alerts */}
               {submitStatus === 'success' && (
-                <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono flex items-center gap-3 animate-in fade-in">
-                  <Sparkles className="w-5 h-5 text-emerald-400 shrink-0" />
+                <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono flex items-center gap-3 animate-in fade-in">
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" />
                   <div>
-                    <span className="font-bold block text-sm">Message Sent Successfully</span>
+                    <span className="font-bold block text-xs sm:text-sm">Message Sent Successfully</span>
                     <span>Thank you for getting in touch. I will respond to your message shortly.</span>
                   </div>
                 </div>
               )}
 
               {submitStatus === 'error' && (
-                <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-mono flex items-start gap-3 animate-in fade-in">
-                  <AlertCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+                <div className="p-3.5 sm:p-4 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-mono flex items-start gap-3 animate-in fade-in">
+                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-rose-400 shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold block text-sm">Submission Error</span>
+                    <span className="font-bold block text-xs sm:text-sm">Submission Error</span>
                     <span>{errorMessage}</span>
                   </div>
                 </div>
               )}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                 <div>
-                  <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-1.5">
+                  <label className="block text-[11px] sm:text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
                     Your Name *
                   </label>
                   <input
@@ -250,12 +250,12 @@ export default function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Sarah Jenkins"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-1.5">
+                  <label className="block text-[11px] sm:text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
                     Your Email *
                   </label>
                   <input
@@ -264,13 +264,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="e.g. sarah@company.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-1.5">
+                <label className="block text-[11px] sm:text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
                   Subject
                 </label>
                 <input
@@ -278,12 +278,12 @@ export default function Contact() {
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   placeholder="e.g. Software Engineering Internship Opportunity"
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors"
+                  className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-mono text-slate-400 uppercase tracking-wider mb-1.5">
+                <label className="block text-[11px] sm:text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">
                   Message *
                 </label>
                 <textarea
@@ -292,14 +292,14 @@ export default function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Type your message here..."
-                  className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors resize-none"
+                  className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 disabled:opacity-50 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/20 transition-all duration-200 cursor-pointer"
+                className="w-full flex items-center justify-center gap-2 py-3 sm:py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 disabled:opacity-50 text-slate-950 font-bold text-xs sm:text-sm tracking-wide shadow-lg shadow-cyan-500/20 transition-all duration-200 cursor-pointer"
               >
                 {isSubmitting ? (
                   <>
