@@ -15,10 +15,15 @@ export default function SocialButton({ type, url, className = "", children }) {
       rel="noopener noreferrer"
       className={className}
       title={`${label} Profile`}
+      aria-label={`${label} Profile`}
     >
       {children ? children : (
         <>
-          {type === 'github' ? <GithubIcon className="w-4 h-4 text-cyan-400" /> : <LinkedinIcon className="w-4 h-4 text-blue-400" />}
+          {type === 'github' ? (
+            <GithubIcon className="w-4 h-4 shrink-0" />
+          ) : (
+            <LinkedinIcon className="w-4 h-4 shrink-0" />
+          )}
           <span>{label}</span>
         </>
       )}
