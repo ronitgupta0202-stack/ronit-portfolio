@@ -118,6 +118,21 @@ export const projects = [
     ],
     githubUrl: "https://github.com/ronitgupta0202-stack/Industrial-Approval-Workflow-tool",
     badge: "Hackathon Project"
+  },
+  {
+    id: "revunivo-ai",
+    title: "RevunivoAI",
+    tagline: "AI-Powered Google Review Generator",
+    description: "An AI-powered platform developed to generate personalized Google reviews for businesses. Integrates NFC cards and QR codes for seamless customer access, generates natural review drafts based on selected services and keywords, and features an admin dashboard for business profiles.",
+    techStack: ["Generative AI", "HTML5", "CSS3", "JavaScript", "NFC & QR"],
+    keyFeatures: [
+      "Developed an AI-powered platform to generate personalized Google reviews for businesses.",
+      "Integrated NFC cards and QR codes for seamless customer access.",
+      "Generates natural review drafts based on customer-selected services and keywords.",
+      "Built an admin dashboard to manage business profiles and review generation."
+    ],
+    githubUrl: import.meta.env.VITE_REVUNIVO_REPO_URL || "",
+    badge: "AI Platform"
   }
 ];
 

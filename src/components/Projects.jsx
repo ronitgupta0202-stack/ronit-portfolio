@@ -9,7 +9,8 @@ import {
   Tv, 
   X,
   Code,
-  Workflow
+  Workflow,
+  Star
 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { projects } from '../data/resumeData';
@@ -27,6 +28,8 @@ export default function Projects() {
         return <Tv className="w-5 h-5 text-blue-400" />;
       case 'industrial-approval-workflow':
         return <Workflow className="w-5 h-5 text-purple-400" />;
+      case 'revunivo-ai':
+        return <Star className="w-5 h-5 text-amber-400" />;
       default:
         return <Cpu className="w-5 h-5 text-cyan-400" />;
     }
